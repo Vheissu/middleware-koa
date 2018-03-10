@@ -50,7 +50,7 @@
     "prepare-release": "cross-env npm run changelog && npm run build"
   },
   "dependencies": {
-    "aurelia-ssr-engine": "^0.1.0",
+    "aurelia-ssr-engine": "git+https://github.com/rquast/ssr-engine.git",
     "koa": "^2.3.0"
   },
   "devDependencies": {
