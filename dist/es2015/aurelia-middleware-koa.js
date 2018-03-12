@@ -8,6 +8,8 @@ export let aureliaKoaMiddleware = (renderOptions, initializationOptions) => {
         if (pathname.match(extensionMatcher)) {
             return next();
         }
+        // set client request headers
+        renderOptions.headers = Object.assign({}, ctx.req.headers);
         return render(Object.assign({ url }, renderOptions), initializationOptions)
             .then((html) => {
             ctx.body = html;

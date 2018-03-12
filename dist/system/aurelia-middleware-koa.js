@@ -18,6 +18,8 @@ System.register(["aurelia-ssr-engine"], function (exports_1, context_1) {
                     if (pathname.match(extensionMatcher)) {
                         return next();
                     }
+                    // set client request headers
+                    renderOptions.headers = Object.assign({}, ctx.req.headers);
                     return aurelia_ssr_engine_1.render(Object.assign({ url: url }, renderOptions), initializationOptions)
                         .then(function (html) {
                         ctx.body = html;

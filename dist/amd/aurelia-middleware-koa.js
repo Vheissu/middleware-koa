@@ -10,6 +10,8 @@ define(["require", "exports", "aurelia-ssr-engine"], function (require, exports,
             if (pathname.match(extensionMatcher)) {
                 return next();
             }
+            // set client request headers
+            renderOptions.headers = Object.assign({}, ctx.req.headers);
             return aurelia_ssr_engine_1.render(Object.assign({ url: url }, renderOptions), initializationOptions)
                 .then(function (html) {
                 ctx.body = html;
