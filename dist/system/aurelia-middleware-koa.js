@@ -1,7 +1,7 @@
 System.register(["aurelia-ssr-engine"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var aurelia_ssr_engine_1, aureliaKoaMiddleware;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (aurelia_ssr_engine_1_1) {
